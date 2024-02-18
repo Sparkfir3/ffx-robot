@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class DraggableObject : MonoBehaviour {
     
-    public virtual void OnDragStart() {
+    public virtual void OnDragStart() { }
 
-    }
-
-    public virtual void OnDragEnd() {
-
-    }
+    public virtual void OnDragEnd() { }
 
 }

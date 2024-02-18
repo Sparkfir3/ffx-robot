@@ -9,6 +9,10 @@ public class OutlineableObject : MonoBehaviour {
 
     // -----------------------------------------------------
 
+    private void Awake() {
+        SetOutlineActive(false);
+    }
+
     public void SetOutlineActive(bool active) {
         if(!outline) {
             return;

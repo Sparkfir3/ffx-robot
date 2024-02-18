@@ -306,4 +306,14 @@ public class Outline : MonoBehaviour {
         break;
     }
   }
+
+  public void RecacheRenderers() {
+    if(isActiveAndEnabled) {
+      OnDisable();
+    }
+    renderers = GetComponentsInChildren<Renderer>();
+    if(isActiveAndEnabled) {
+      OnEnable();
+    }
+  }
 }
