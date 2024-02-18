@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OutlineableObject : MonoBehaviour
-{
+public class OutlineableObject : MonoBehaviour {
+
     [SerializeField]
     private Outline outline;
 

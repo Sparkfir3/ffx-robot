@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectOutlineController : MonoBehaviour
-{
-    [SerializeField]
-    private float raycastDistance = 1000f;
+public class ObjectOutlineController : MonoBehaviour {
+
+    [Header("Raycast Settings"), SerializeField]
+    private float raycastDistance = 100f;
     [SerializeField]
     private LayerMask raycastLayers = ~0;
 
     // -----------------------------------------------------
 
-    [SerializeField]
+    [Header("Runtime Data"), SerializeField]
     private OutlineableObject _targetOutline;
     public OutlineableObject TargetOutline {
         get {
