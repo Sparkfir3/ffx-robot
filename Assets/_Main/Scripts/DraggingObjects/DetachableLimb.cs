@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DetachableLimb : DraggableObject {
     
@@ -14,6 +15,11 @@ public class DetachableLimb : DraggableObject {
     [SerializeField]
     private Transform originalParent;
     private Transform attachPoint;
+
+    // I'd use Odin Inspector to better sort/organize these events and other variables, but this is on a public repo so I can't
+    [Space(10)]
+    public UnityEvent OnLimbDetach;
+    public UnityEvent OnLimbAttach;
 
     // -----------------------------------------------------
 
@@ -58,6 +64,7 @@ public class DetachableLimb : DraggableObject {
     private void Detach() {
         IsAttached = false;
         transform.parent = null;
+        OnLimbDetach?.Invoke();
         RefreshParentOutline();
     }
 
@@ -65,6 +72,7 @@ public class DetachableLimb : DraggableObject {
         IsAttached = true;
         transform.parent = originalParent;
         transform.SetPositionAndRotation(attachPoint.position, attachPoint.rotation);
+        OnLimbAttach?.Invoke();
         RefreshParentOutline();
     }
 

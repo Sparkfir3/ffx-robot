@@ -198,10 +198,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fccfa5d40e4a264a8d93074dabc7731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnDragStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDragEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
   distanceToReattach: 0.25
   rootParentOutline: {fileID: 3169474635137801560}
   <IsAttached>k__BackingField: 1
   originalParent: {fileID: 6579805649609450358}
+  OnLimbDetach:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLimbAttach:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &9041004286217925409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,10 +701,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fccfa5d40e4a264a8d93074dabc7731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnDragStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDragEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
   distanceToReattach: 0.25
   rootParentOutline: {fileID: 3169474635137801560}
   <IsAttached>k__BackingField: 1
   originalParent: {fileID: 6579805649609450358}
+  OnLimbDetach:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLimbAttach:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3109659605722550688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,6 +797,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f982bb7724fdd4408d54502e2921850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnDragStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDragEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3169474635137801560
 MonoBehaviour:
   m_ObjectHideFlags: 0
