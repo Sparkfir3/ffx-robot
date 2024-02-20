@@ -11,25 +11,51 @@ public class ArmAttachStatusText : MonoBehaviour
     [SerializeField]
     private string textDetached = "Detached";
     [SerializeField]
-    private TextMeshProUGUI textBox;
+    private TextMeshProUGUI textbox;
+    [SerializeField]
+    private RobotStatus robotStatus;
 
-    private bool leftArmAttached = true;
-    private bool rightArmAttached = true;
+    public string CurrentText => textbox ? textbox.text : "";
 
     // -----------------------------------------------------
 
-    public void SetLeftArmAttached(bool attached) {
-        leftArmAttached = attached;
-        UpdateText();
+    private void Start() {
+        Initialize();
     }
 
-    public void SetRightArmAttached(bool attached) {
-        rightArmAttached = attached;
-        UpdateText();
+    private void OnDestroy() {
+        if(robotStatus) {
+            robotStatus.OnUpdateRobotStatus -= UpdateText;
+        }
     }
 
-    private void UpdateText() {
-        textBox.text = leftArmAttached && rightArmAttached ? textAttached : textDetached;
+    private void OnValidate() {
+        if(!textbox) {
+            textbox = GetComponentInChildren<TextMeshProUGUI>();
+        }
+    }
+
+    // -----------------------------------------------------
+
+    public void Initialize() {
+        OnValidate();
+        if(!robotStatus) {
+            Debug.LogWarning($"ArmAttachStatusText {gameObject.name} did not have an assigned RobotStatus, having to use FindObjectOfType instead...");
+            AssignRobot(FindObjectOfType<RobotStatus>());
+        }
+        if(robotStatus) {
+            robotStatus.OnUpdateRobotStatus += UpdateText;
+        }
+    }
+
+    public void AssignRobot(RobotStatus robotStatus) {
+        this.robotStatus = robotStatus;
+    }
+
+    private void UpdateText(bool attached) {
+        if(textbox) {
+            textbox.text = attached ? textAttached : textDetached;
+        }
     }
 
 }

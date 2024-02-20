@@ -70,6 +70,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 698382eb1dae9dc4d8c9c095466747d0, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 3380564835931900793}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 698382eb1dae9dc4d8c9c095466747d0, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 432412748011807305}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 698382eb1dae9dc4d8c9c095466747d0, type: 3}
       insertIndex: -1
@@ -210,10 +213,34 @@ MonoBehaviour:
   originalParent: {fileID: 6579805649609450358}
   OnLimbDetach:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3380564835931900793}
+        m_TargetAssemblyTypeName: RobotStatus, MainScripts
+        m_MethodName: SetRightArmAttached
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnLimbAttach:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3380564835931900793}
+        m_TargetAssemblyTypeName: RobotStatus, MainScripts
+        m_MethodName: SetRightArmAttached
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &9041004286217925409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,10 +740,34 @@ MonoBehaviour:
   originalParent: {fileID: 6579805649609450358}
   OnLimbDetach:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3380564835931900793}
+        m_TargetAssemblyTypeName: RobotStatus, MainScripts
+        m_MethodName: SetLeftArmAttached
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnLimbAttach:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3380564835931900793}
+        m_TargetAssemblyTypeName: RobotStatus, MainScripts
+        m_MethodName: SetLeftArmAttached
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &3109659605722550688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,6 +836,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 698382eb1dae9dc4d8c9c095466747d0, type: 3}
   m_PrefabInstance: {fileID: 5807999364841330667}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3380564835931900793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6654984856159840954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7c9a2226f685eb4a9315cc9d4935196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <LeftArmAttached>k__BackingField: 1
+  <RightArmAttached>k__BackingField: 1
 --- !u!114 &432412748011807305
 MonoBehaviour:
   m_ObjectHideFlags: 0

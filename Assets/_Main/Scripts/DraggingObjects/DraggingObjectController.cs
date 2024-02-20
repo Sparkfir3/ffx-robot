@@ -52,7 +52,6 @@ public class DraggingObjectController : MonoBehaviour {
             float x = cameraPosition.x + (n * direction.x) + targetOffsetFromHit.x;
             float z = cameraPosition.z + (n * direction.z) + targetOffsetFromHit.z;
             targetTransform.position = new Vector3(x, targetTransform.position.y, z);
-
         }
     }
 }
